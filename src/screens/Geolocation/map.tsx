@@ -1,11 +1,11 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 import { requestForegroundPermissionsAsync , getCurrentPositionAsync, LocationObject, watchPositionAsync, LocationAccuracy} from 'expo-location';
-import { styles } from './styles';
+import { styles } from '../../../styles';
 import { useEffect, useState, useRef } from 'react';
 import MapView , { Marker}from 'react-native-maps';
 
-export default function App() {
+export function MapGeolocation() {
 
   const [location , setLocation] = useState<LocationObject | null>(null);
 
